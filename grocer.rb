@@ -1,12 +1,12 @@
 def consolidate_cart(cart)
   clean_cart = {}
-  cart.each do |items|
-    items.map({}) do |item, attributes|
+  cart.each do |item_hash|
+    item_hash.map({}) do |item, attributes|
       clean_cart[item] ||=attributes
       clean_cart[item][:count] ? clean_cart[item][:count] +=1 : new_cart[item[[:count] = 1]]
     end
   end
-  new_cart
+  clean_cart
 end
 
 def apply_coupons(cart, coupons)
