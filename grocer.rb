@@ -24,7 +24,7 @@ def apply_coupons(cart, coupons)
       if cart["#{item.upcase} W/COUPON"].nil?
         cart.merge!(temp)
       else
-        cart["#{item.upcase} W/COUPON"] [:count]=+ 1
+        cart["#{item.upcase} W/COUPON"][:count]=+ 1
       end
 
       cart[item][:count] -= coupon_hash[:num]
