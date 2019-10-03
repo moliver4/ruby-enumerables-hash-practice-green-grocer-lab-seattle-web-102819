@@ -14,6 +14,12 @@ def apply_coupons(cart, coupons)
     item=coupon_hash[:item]
 
     if !cart[item].nil? && cart[item][:count] >= coupon_hash[:num]
+      temp = {"#{item.upcase} W/ COUPON} => {
+        :price =>coupon_hash[:cost],
+        :clearance => coupon_hash[:clearance],
+        :count => 1
+        }
+      }
 end
 
 def apply_clearance(cart)
