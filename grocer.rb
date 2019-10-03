@@ -15,7 +15,7 @@ def apply_coupons(cart, coupons)
 
     if cart[item] && cart[item][:count] >= coupon_hash[:num]
       temp = {"#{item.upcase} W/COUPON" => {
-        :price =>coupon_hash[:cost],
+        :price =>coupon_hash[:cost]/coupon_hash[:num],
         :clearance => coupon_hash[:clearance],
         :count => 1
         }
