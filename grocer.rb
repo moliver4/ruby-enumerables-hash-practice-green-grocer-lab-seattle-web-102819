@@ -1,5 +1,10 @@
 def consolidate_cart(cart)
-  # code here
+  clean_cart = {}
+  cart.each do |items|
+    items.map({}) do |item, attributes|
+      clean_cart[item] ||=attributes
+    
+    memo[key] = value
 end
 
 def apply_coupons(cart, coupons)
