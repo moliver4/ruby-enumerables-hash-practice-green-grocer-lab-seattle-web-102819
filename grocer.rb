@@ -3,7 +3,7 @@ def consolidate_cart(cart)
   cart.each do |item_hash|
     item_hash.map({}) do |item, attributes|
       clean_cart[item] ||=attributes
-      clean_cart[item][:count] ? clean_cart[item][:count] +=1 : new_cart[item[[:count] = 1]]
+      clean_cart[item][:count] ? clean_cart[item][:count] +=1 : new_cart[item][:count] = 1
     end
   end
   clean_cart
