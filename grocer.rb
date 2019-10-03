@@ -3,6 +3,7 @@ def consolidate_cart(cart)
   cart.each do |items|
     items.map({}) do |item, attributes|
       clean_cart[item] ||=attributes
+      clean_cart[item][:count] ? clean_cart[item][:count] +=1 : new_cart[item[[:count] = 1]]
 
     memo[key] = value
 end
