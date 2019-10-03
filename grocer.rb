@@ -25,6 +25,7 @@ def apply_coupons(cart, coupons)
         cart.merge!(temp)
       else
         cart["#{item.upcase} W/ COUPON"] [:count]=+ 1
+      end
 end
 
 def apply_clearance(cart)
