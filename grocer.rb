@@ -26,6 +26,8 @@ def apply_coupons(cart, coupons)
       else
         cart["#{item.upcase} W/ COUPON"] [:count]=+ 1
       end
+
+      cart[item][:count] -= coupon_hash[:num]
 end
 
 def apply_clearance(cart)
