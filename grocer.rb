@@ -4,6 +4,8 @@ def consolidate_cart(cart)
     items.map({}) do |item, attributes|
       clean_cart[item] ||=attributes
       clean_cart[item][:count] ? clean_cart[item][:count] +=1 : new_cart[item[[:count] = 1]]
+    end
+  end
 end
 
 def apply_coupons(cart, coupons)
