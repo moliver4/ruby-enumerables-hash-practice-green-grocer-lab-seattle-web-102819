@@ -30,13 +30,12 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  cart.each do |item, attributes|
-    if attributes[:clearance] == true
-      attributes[:price] = (attribute_hash[:price] *
-      0.8).round(2)
+  cart.each do |item|
+    if cart[item][:clearance]
+      cart[item][:price] = (cart[item][:price]* 0.80).round(2)
     end
   end
-cart
+  cart
 end
 
 def checkout(cart, coupons)
