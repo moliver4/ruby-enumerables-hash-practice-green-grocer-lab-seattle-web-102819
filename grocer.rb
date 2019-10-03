@@ -20,6 +20,11 @@ def apply_coupons(cart, coupons)
         :count => 1
         }
       }
+
+      if cart["#{item.upcase} W/ COUPON"].nil?
+        hash.merge!(temp)
+      else
+        hash["#{item.upcase} W/ COUPON"] [:count]=+ 1
 end
 
 def apply_clearance(cart)
