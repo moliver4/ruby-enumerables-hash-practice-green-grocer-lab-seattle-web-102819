@@ -13,7 +13,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon_hash| #hash of each item
     item=coupon_hash[:item]
 
-    if !cart[item].nil? && cart[item][:count] >= coupon_hash[:num]
+    if cart[item] && cart[item][:count] >= coupon_hash[:num]
       temp = {"#{item.upcase} W/COUPON" => {
         :price =>coupon_hash[:cost],
         :clearance => coupon_hash[:clearance],
